@@ -45,8 +45,6 @@ func TestAddTwoNumbers(t *testing.T) {
 	}
 
 	for _, tdata := range testData {
-		gotNode := addTwoNumbers(SliceToListNode(tdata.input1), SliceToListNode(tdata.input2))
-		except := SliceToListNode(tdata.except)
-		assert.EqualValues(t, except, gotNode)
+		assert.EqualValues(t, SliceToListNode(tdata.except), addTwoNumbers(SliceToListNode(tdata.input1), SliceToListNode(tdata.input2)))
 	}
 }
