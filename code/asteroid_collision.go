@@ -28,7 +28,7 @@ package code
 输出：[-2,-1,1,2]
 解释：-2 和 -1 向左移动，而 1 和 2 向右移动。 由于移动方向相同的行星不会发生碰撞，所以最终没有行星发生碰撞
 
-https://leetcode-cn.com/problems/asteroid-collision/
+https://leetcode.cn/problems/asteroid-collision/
 */
 func asteroidCollision(asteroids []int) []int {
 	if len(asteroids) == 0 {

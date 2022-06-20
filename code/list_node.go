@@ -21,5 +21,5 @@ func (l *ListNode) String() string {
 	}
 	builder.WriteString("]")
 
-	return 	builder.String()
+	return builder.String()
 }

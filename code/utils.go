@@ -1,12 +1,14 @@
 package code
 
 func SliceToListNode(input []int) *ListNode {
+	if len(input) == 0 {
+		return nil
+	}
 	result := &ListNode{}
-
 	head := result
 	for i := range input {
 		head.Val = input[i]
-		if i < len(input) -1 {
+		if i < len(input)-1 {
 			head.Next = &ListNode{}
 			head = head.Next
 		}
@@ -22,4 +24,18 @@ func FilterZero(input []int) []int {
 		}
 	}
 	return result
+}
+
+func MaxInt(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+func MinInt(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
 }

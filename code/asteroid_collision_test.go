@@ -50,11 +50,11 @@ func TestAsteroidCollision(t *testing.T) {
 			except: []int{-2, -1, 1, 2},
 		},
 		{
-			input1: []int{-2,-2,1,-2},
-			except: []int{-2,-2,-2},
+			input1: []int{-2, -2, 1, -2},
+			except: []int{-2, -2, -2},
 		},
 		{
-			input1: []int{-2,2,-1,-2},
+			input1: []int{-2, 2, -1, -2},
 			except: []int{-2},
 		},
 	}
