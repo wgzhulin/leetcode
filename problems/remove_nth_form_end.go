@@ -1,5 +1,7 @@
 package problems
 
+import "github.com/zhulinw/leetcode/basedata"
+
 /*
 19. 删除链表的倒数第 N 个结点
 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
@@ -20,7 +22,7 @@ package problems
 链接：https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func removeNthFromEnd(head *ListNode, n int) *ListNode {
+func removeNthFromEnd(head *basedata.ListNode, n int) *basedata.ListNode {
 	sum := 0
 	for node := head; node != nil; node = node.Next {
 		sum++

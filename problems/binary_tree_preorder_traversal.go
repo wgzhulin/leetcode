@@ -1,5 +1,7 @@
 package problems
 
+import "github.com/zhulinw/leetcode/basedata"
+
 /*
 144. 二叉树的前序遍历
 给你二叉树的根节点 root ，返回它节点值的 前序 遍历。
@@ -21,7 +23,7 @@ package problems
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
 
-func preorderTraversal(root *TreeNode) []int {
+func preorderTraversal(root *basedata.TreeNode) []int {
 	if root == nil {
 		return nil
 	}

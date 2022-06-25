@@ -1,4 +1,4 @@
-package problems
+package basedata
 
 type TreeNode struct {
 	Val   int

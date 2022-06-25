@@ -1,5 +1,7 @@
 package problems
 
+import "github.com/zhulinw/leetcode/basedata"
+
 /*
 2. 两数相加
 给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。
@@ -17,8 +19,8 @@ package problems
 
 https://leetcode.cn/problems/add-two-numbers/
 */
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	result := &ListNode{}
+func addTwoNumbers(l1 *basedata.ListNode, l2 *basedata.ListNode) *basedata.ListNode {
+	result := &basedata.ListNode{}
 	carry := 0
 	head := result
 
@@ -32,14 +34,14 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			tempVal += node2.Val
 			node2 = node2.Next
 		}
-		head.Next = &ListNode{Val: (tempVal + carry) % 10}
+		head.Next = &basedata.ListNode{Val: (tempVal + carry) % 10}
 		head = head.Next
 
 		carry = (tempVal + carry) / 10
 	}
 
 	if carry > 0 {
-		head.Next = &ListNode{Val: carry}
+		head.Next = &basedata.ListNode{Val: carry}
 	}
 
 	return result.Next

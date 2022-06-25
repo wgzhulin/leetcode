@@ -1,7 +1,8 @@
 package problems
 
 import (
-	"github.com/stretchr/testify/assert"
+	"github.com/zhulinw/leetcode/testify/assert"
+	"github.com/zhulinw/leetcode/testify/tutils"
 	"testing"
 )
 
@@ -44,7 +45,7 @@ func TestRemoveNthFromEnd(t *testing.T) {
 	}
 
 	for _, tdata := range testData {
-		assert.Equal(t, SliceToListNode(tdata.except),
-			removeNthFromEnd(SliceToListNode(tdata.input), tdata.input2))
+		assert.Equal(t, tutils.SliceToListNode(tdata.except),
+			removeNthFromEnd(tutils.SliceToListNode(tdata.input), tdata.input2))
 	}
 }

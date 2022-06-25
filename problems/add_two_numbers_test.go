@@ -1,7 +1,8 @@
 package problems
 
 import (
-	"github.com/stretchr/testify/assert"
+	"github.com/zhulinw/leetcode/testify/assert"
+	"github.com/zhulinw/leetcode/testify/tutils"
 	"testing"
 )
 
@@ -45,6 +46,6 @@ func TestAddTwoNumbers(t *testing.T) {
 	}
 
 	for _, tdata := range testData {
-		assert.EqualValues(t, SliceToListNode(tdata.except), addTwoNumbers(SliceToListNode(tdata.input1), SliceToListNode(tdata.input2)))
+		assert.Equal(t, tutils.SliceToListNode(tdata.except), addTwoNumbers(tutils.SliceToListNode(tdata.input1), tutils.SliceToListNode(tdata.input2)))
 	}
 }

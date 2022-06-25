@@ -1,5 +1,7 @@
 package problems
 
+import "github.com/zhulinw/leetcode/basedata"
+
 /*
 129. 求根节点到叶节点数字之和
 给你一个二叉树的根节点 root ，树中每个节点都存放有一个 0 到 9 之间的数字。
@@ -20,11 +22,11 @@ package problems
 
 https://leetcode.cn/problems/sum-root-to-leaf-numbers/
 */
-func sumNumbers(root *TreeNode) int {
+func sumNumbers(root *basedata.TreeNode) int {
 	return deepFirstSearch(root, 0)
 }
 
-func deepFirstSearch(root *TreeNode, prev int) int {
+func deepFirstSearch(root *basedata.TreeNode, prev int) int {
 	if root == nil {
 		return 0
 	}
