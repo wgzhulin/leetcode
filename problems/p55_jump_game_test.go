@@ -36,5 +36,6 @@ func TestCanJump(t *testing.T) {
 
 	for _, tdata := range testData {
 		assert.Equal(t, tdata.except, canJump(tdata.input))
+		assert.Equal(t, tdata.except, canJump2(tdata.input))
 	}
 }

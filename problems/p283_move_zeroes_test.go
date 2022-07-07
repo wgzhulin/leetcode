@@ -33,6 +33,7 @@ func TestMoveZeroes(t *testing.T) {
 
 	for _, tdata := range testData {
 		moveZeroes(tdata.input)
+		moveZeroes2(tdata.input)
 		assert.Equal(t, tdata.except, tdata.input)
 	}
 }

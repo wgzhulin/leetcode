@@ -40,5 +40,7 @@ func TestClimbStairs(t *testing.T) {
 
 	for _, tdata := range testData {
 		assert.Equal(t, tdata.except, climbStairs(tdata.input))
+		assert.Equal(t, tdata.except, climbStairs2(tdata.input))
+		assert.Equal(t, tdata.except, climbStairs3(tdata.input))
 	}
 }
