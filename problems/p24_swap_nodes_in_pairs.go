@@ -1,6 +1,6 @@
 package problems
 
-import "github.com/zhulinw/leetcode/basedata"
+import "github.com/zhulinw/leetcode/ltdata"
 
 /*
 24. 两两交换链表中的节点
@@ -22,8 +22,8 @@ import "github.com/zhulinw/leetcode/basedata"
 链接：https://leetcode.cn/problems/swap-nodes-in-pairs/
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func swapPairs(head *basedata.ListNode) *basedata.ListNode {
-	ans := &basedata.ListNode{Next: head}
+func swapPairs(head *ltdata.ListNode) *ltdata.ListNode {
+	ans := &ltdata.ListNode{Next: head}
 	for node := ans; node != nil && node.Next != nil && node.Next.Next != nil; {
 		node1 := node.Next
 		node2 := node1.Next
@@ -38,7 +38,7 @@ func swapPairs(head *basedata.ListNode) *basedata.ListNode {
 	return ans.Next
 }
 
-func swapPairs2(head *basedata.ListNode) *basedata.ListNode {
+func swapPairs2(head *ltdata.ListNode) *ltdata.ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}

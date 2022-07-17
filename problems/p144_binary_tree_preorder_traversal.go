@@ -1,6 +1,6 @@
 package problems
 
-import "github.com/zhulinw/leetcode/basedata"
+import "github.com/zhulinw/leetcode/ltdata"
 
 /*
 144. 二叉树的前序遍历
@@ -23,7 +23,7 @@ import "github.com/zhulinw/leetcode/basedata"
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
 
-func preorderTraversal(root *basedata.TreeNode) []int {
+func preorderTraversal(root *ltdata.TreeNode) []int {
 	if root == nil {
 		return nil
 	}

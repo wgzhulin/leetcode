@@ -1,6 +1,6 @@
 package problems
 
-import "github.com/zhulinw/leetcode/basedata"
+import "github.com/zhulinw/leetcode/ltdata"
 
 /*
 129. 求根节点到叶节点数字之和
@@ -22,11 +22,11 @@ import "github.com/zhulinw/leetcode/basedata"
 
 https://leetcode.cn/problems/sum-root-to-leaf-numbers/
 */
-func sumNumbers(root *basedata.TreeNode) int {
+func sumNumbers(root *ltdata.TreeNode) int {
 	return deepFirstSearch(root, 0)
 }
 
-func deepFirstSearch(root *basedata.TreeNode, prev int) int {
+func deepFirstSearch(root *ltdata.TreeNode, prev int) int {
 	if root == nil {
 		return 0
 	}

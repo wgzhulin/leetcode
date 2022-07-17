@@ -1,7 +1,7 @@
 package problems
 
 import (
-	"github.com/zhulinw/leetcode/basedata"
+	"github.com/zhulinw/leetcode/ltdata"
 )
 
 /*
@@ -24,24 +24,24 @@ import (
 链接：https://leetcode.cn/problems/merge-two-sorted-lists/
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func mergeTwoLists(list1 *basedata.ListNode, list2 *basedata.ListNode) *basedata.ListNode {
-	result := &basedata.ListNode{}
+func mergeTwoLists(list1 *ltdata.ListNode, list2 *ltdata.ListNode) *ltdata.ListNode {
+	result := &ltdata.ListNode{}
 	head := result
 	for node1, node2 := list1, list2; node1 != nil || node2 != nil; {
 		if node1 != nil && node2 != nil {
 			if node1.Val < node2.Val {
-				head.Next = &basedata.ListNode{Val: node1.Val}
+				head.Next = &ltdata.ListNode{Val: node1.Val}
 				node1 = node1.Next
 
 				head = head.Next
 			} else if node2.Val < node1.Val {
-				head.Next = &basedata.ListNode{Val: node2.Val}
+				head.Next = &ltdata.ListNode{Val: node2.Val}
 				node2 = node2.Next
 
 				head = head.Next
 			} else {
-				tempNode := &basedata.ListNode{Val: node1.Val}
-				tempNode.Next = &basedata.ListNode{Val: node2.Val}
+				tempNode := &ltdata.ListNode{Val: node1.Val}
+				tempNode.Next = &ltdata.ListNode{Val: node2.Val}
 				head.Next = tempNode
 
 				head = tempNode.Next
@@ -52,13 +52,13 @@ func mergeTwoLists(list1 *basedata.ListNode, list2 *basedata.ListNode) *basedata
 		}
 
 		if node1 != nil && node2 == nil {
-			head.Next = &basedata.ListNode{Val: node1.Val}
+			head.Next = &ltdata.ListNode{Val: node1.Val}
 			node1 = node1.Next
 			head = head.Next
 		}
 
 		if node1 == nil && node2 != nil {
-			head.Next = &basedata.ListNode{Val: node2.Val}
+			head.Next = &ltdata.ListNode{Val: node2.Val}
 			node2 = node2.Next
 			head = head.Next
 		}

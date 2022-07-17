@@ -1,4 +1,4 @@
-package basedata
+package ltdata
 
 import (
 	"fmt"

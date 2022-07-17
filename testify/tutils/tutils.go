@@ -1,34 +1,34 @@
 package tutils
 
-import "github.com/zhulinw/leetcode/basedata"
+import "github.com/zhulinw/leetcode/ltdata"
 
-func SliceToListNode(input []int) *basedata.ListNode {
+func SliceToListNode(input []int) *ltdata.ListNode {
 	if len(input) == 0 {
 		return nil
 	}
-	result := &basedata.ListNode{}
+	result := &ltdata.ListNode{}
 	head := result
 	for i := range input {
 		head.Val = input[i]
 		if i < len(input)-1 {
-			head.Next = &basedata.ListNode{}
+			head.Next = &ltdata.ListNode{}
 			head = head.Next
 		}
 	}
 	return result
 }
 
-func IntSliceToBinaryTree(input []int) *basedata.TreeNode {
+func IntSliceToBinaryTree(input []int) *ltdata.TreeNode {
 	s := make([]int, len(input)+1)
 	copy(s[1:], input)
 	return binaryTree(s, 1)
 }
 
-func binaryTree(input []int, index int) *basedata.TreeNode {
+func binaryTree(input []int, index int) *ltdata.TreeNode {
 	if index < len(input) {
 		val := input[index]
 		if val != 0 {
-			return &basedata.TreeNode{
+			return &ltdata.TreeNode{
 				Val:   input[index],
 				Left:  binaryTree(input, index*2),
 				Right: binaryTree(input, index*2+1),
