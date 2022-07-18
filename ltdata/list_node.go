@@ -10,6 +10,10 @@ type ListNode struct {
 	Next *ListNode
 }
 
+func NewListNode(val int) *ListNode {
+	return &ListNode{Val: val}
+}
+
 func (l *ListNode) String() string {
 	var builder strings.Builder
 	builder.WriteString("[")

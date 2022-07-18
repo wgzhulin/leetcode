@@ -18,6 +18,30 @@ func SliceToListNode(input []int) *ltdata.ListNode {
 	return result
 }
 
+func SliceToCycleListNode(input []int, pos int) *ltdata.ListNode {
+	if len(input) == 0 {
+		return nil
+	}
+	result := &ltdata.ListNode{}
+	head := result
+
+	var cycle *ltdata.ListNode
+	var tail *ltdata.ListNode
+	for i := range input {
+		node := ltdata.NewListNode(input[i])
+		if i == pos {
+			cycle = node
+		}
+		if i == len(input)-1 {
+			tail = node
+		}
+		head.Next = node
+		head = head.Next
+	}
+	tail.Next = cycle
+	return result.Next
+}
+
 func IntSliceToBinaryTree(input []int) *ltdata.TreeNode {
 	s := make([]int, len(input)+1)
 	copy(s[1:], input)

@@ -14,3 +14,9 @@ func Equal(t *testing.T, expected, actual interface{}) {
 			"actual  : %v", expected, actual))
 	}
 }
+
+func EqualFailNotPrint(t *testing.T, expected, actual interface{}) {
+	if !reflect.DeepEqual(expected, actual) {
+		t.Fatalf("fail")
+	}
+}
