@@ -11,17 +11,17 @@ import "github.com/zhulinw/leetcode/ltdata"
 */
 func preorder(root *ltdata.Node) []int {
 	ans := make([]int, 0)
-	return preorderRcur(root, ans)
+	dfs(root, &ans)
+	return ans
 }
 
-func preorderRcur(root *ltdata.Node, ans []int) []int {
+func dfs(root *ltdata.Node, ans *[]int)  {
 	if root == nil {
-		return ans
+		return
 	}
 
-	ans = append(ans, root.Val)
+	*ans = append(*ans, root.Val)
 	for _, child := range root.Children {
-		ans = preorderRcur(child, ans)
+		dfs(child, ans)
 	}
-	return ans
 }
