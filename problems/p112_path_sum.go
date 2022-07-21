@@ -1,6 +1,6 @@
 package problems
 
-import "github.com/zhulinw/leetcode/ltdata"
+import . "github.com/zhulinw/leetcode/ltdata"
 
 /*
 112. 路径总和
@@ -13,7 +13,7 @@ import "github.com/zhulinw/leetcode/ltdata"
 
 https://leetcode.cn/problems/path-sum/
 */
-func hasPathSum(root *ltdata.TreeNode, targetSum int) bool {
+func hasPathSum(root *TreeNode, targetSum int) bool {
 	if root == nil {
 		return false
 	}

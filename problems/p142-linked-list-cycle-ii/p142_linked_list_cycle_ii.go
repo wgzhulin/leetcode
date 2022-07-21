@@ -1,7 +1,7 @@
 package linked_list_cycle_ii
 
 import (
-	"github.com/zhulinw/leetcode/ltdata"
+	. "github.com/zhulinw/leetcode/ltdata"
 )
 
 /*
@@ -11,8 +11,8 @@ import (
 链接：https://leetcode.cn/problems/linked-list-cycle-ii/
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func detectCycle(head *ltdata.ListNode) *ltdata.ListNode {
-	s := make([]*ltdata.ListNode, 0)
+func detectCycle(head *ListNode) *ListNode {
+	s := make([]*ListNode, 0)
 	for node := head; node != nil; node = node.Next {
 		s = append(s, node)
 

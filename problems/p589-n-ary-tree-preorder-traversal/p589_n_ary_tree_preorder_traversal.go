@@ -1,6 +1,6 @@
 package n_ary_tree_preorder_traversal
 
-import "github.com/zhulinw/leetcode/ltdata"
+import . "github.com/zhulinw/leetcode/ltdata"
 
 /*
 589. N 叉树的前序遍历
@@ -9,13 +9,13 @@ import "github.com/zhulinw/leetcode/ltdata"
 链接：https://leetcode.cn/problems/n-ary-tree-preorder-traversal/
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func preorder(root *ltdata.Node) []int {
+func preorder(root *Node) []int {
 	ans := make([]int, 0)
 	dfs(root, &ans)
 	return ans
 }
 
-func dfs(root *ltdata.Node, ans *[]int)  {
+func dfs(root *Node, ans *[]int)  {
 	if root == nil {
 		return
 	}

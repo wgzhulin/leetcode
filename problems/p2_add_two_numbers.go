@@ -1,6 +1,6 @@
 package problems
 
-import "github.com/zhulinw/leetcode/ltdata"
+import . "github.com/zhulinw/leetcode/ltdata"
 
 /*
 2. 两数相加
@@ -19,8 +19,8 @@ import "github.com/zhulinw/leetcode/ltdata"
 
 https://leetcode.cn/problems/add-two-numbers/
 */
-func addTwoNumbers(l1 *ltdata.ListNode, l2 *ltdata.ListNode) *ltdata.ListNode {
-	result := &ltdata.ListNode{}
+func addTwoNumbers(l1 *ListNode, l2 *ListNode) *stNode {
+	result := &ListNode{}
 	carry := 0
 	head := result
 
@@ -34,14 +34,14 @@ func addTwoNumbers(l1 *ltdata.ListNode, l2 *ltdata.ListNode) *ltdata.ListNode {
 			tempVal += node2.Val
 			node2 = node2.Next
 		}
-		head.Next = &ltdata.ListNode{Val: (tempVal + carry) % 10}
+		head.Next = &ListNode{Val: (tempVal + carry) % 10}
 		head = head.Next
 
 		carry = (tempVal + carry) / 10
 	}
 
 	if carry > 0 {
-		head.Next = &ltdata.ListNode{Val: carry}
+		head.Next = &ListNode{Val: carry}
 	}
 
 	return result.Next

@@ -1,7 +1,7 @@
 package problems
 
 import (
-	"github.com/zhulinw/leetcode/ltdata"
+	. "github.com/zhulinw/leetcode/ltdata"
 	"math"
 )
 
@@ -21,10 +21,10 @@ import (
 链接：https://leetcode.cn/problems/find-largest-value-in-each-tree-row/
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func largestValues(root *ltdata.TreeNode) []int {
+func largestValues(root *TreeNode) []int {
 	ans := make([]int, 0)
 
-	queue := make([]*ltdata.TreeNode, 0)
+	queue := make([]*TreeNode, 0)
 	queue = append(queue, root)
 	for len(queue) > 0 {
 		maxVal := math.MinInt32
@@ -46,11 +46,11 @@ func largestValues(root *ltdata.TreeNode) []int {
 	return ans
 }
 
-func largestValues2(root *ltdata.TreeNode) []int {
+func largestValues2(root *TreeNode) []int {
 	return dfsTreeNode(root, []int{}, 0)
 }
 
-func dfsTreeNode(root *ltdata.TreeNode, ans []int, height int) []int {
+func dfsTreeNode(root *TreeNode, ans []int, height int) []int {
 	if root == nil {
 		return ans
 	}

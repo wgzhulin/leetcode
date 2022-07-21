@@ -1,7 +1,7 @@
 package middle_of_the_linked_list
 
 import (
-	"github.com/zhulinw/leetcode/ltdata"
+	. "github.com/zhulinw/leetcode/ltdata"
 )
 
 /*
@@ -11,7 +11,7 @@ import (
 链接：https://leetcode.cn/problems/middle-of-the-linked-list/
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func middleNode(head *ltdata.ListNode) *ltdata.ListNode {
+func middleNode(head *ListNode) *ListNode {
 	ans := head
 
 	n := 0
@@ -25,7 +25,7 @@ func middleNode(head *ltdata.ListNode) *ltdata.ListNode {
 	return ans
 }
 
-func middleNode2(head *ltdata.ListNode) *ltdata.ListNode {
+func middleNode2(head *ListNode) *ListNode {
 	ans := head
 	for fast := head; fast != nil && fast.Next != nil; fast = fast.Next.Next {
 		ans = ans.Next
