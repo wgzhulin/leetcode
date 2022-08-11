@@ -6,7 +6,7 @@ import (
 )
 
 func TestGenGoCode(t *testing.T) {
-	ltQuestion := FetchLeetCodeQuestionInfo("remove-duplicates-from-sorted-list")
+	ltQuestion := FetchLeetCodeQuestionInfo("maximum-number-of-groups-entering-a-competition")
 	cnQuestionInfo := NewCnQuestion(ltQuestion)
 
 	log.Println("====== fetch success =====")
