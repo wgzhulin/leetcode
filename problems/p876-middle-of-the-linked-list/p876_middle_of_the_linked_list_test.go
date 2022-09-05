@@ -1,7 +1,7 @@
 package middle_of_the_linked_list
 
 import (
-	"github.com/zhulinw/leetcode/testify/assert"
+	"github.com/stretchr/testify/assert"
 	"github.com/zhulinw/leetcode/testify/tutils"
 	"testing"
 )

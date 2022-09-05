@@ -1,7 +1,7 @@
 package remove_duplicates_from_sorted_list
 
 import (
-	"github.com/zhulinw/leetcode/testify/assert"
+	"github.com/stretchr/testify/assert"
 	"github.com/zhulinw/leetcode/testify/tutils"
 	"testing"
 )

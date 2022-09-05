@@ -1,7 +1,7 @@
 package best_time_to_buy_and_sell_stock
 
 import (
-	"github.com/zhulinw/leetcode/testify/assert"
+	"github.com/stretchr/testify/assert"
 	"testing"
 )
 

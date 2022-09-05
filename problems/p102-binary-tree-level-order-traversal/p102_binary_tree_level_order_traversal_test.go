@@ -1,7 +1,7 @@
 package binary_tree_level_order_traversal
 
 import (
-	"github.com/zhulinw/leetcode/testify/assert"
+	"github.com/stretchr/testify/assert"
 	"github.com/zhulinw/leetcode/testify/tutils"
 	"testing"
 )

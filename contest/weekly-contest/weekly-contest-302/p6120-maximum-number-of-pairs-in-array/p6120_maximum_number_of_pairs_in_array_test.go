@@ -1,7 +1,7 @@
 package maximum_number_of_pairs_in_array
 
 import (
-	"github.com/zhulinw/leetcode/testify/assert"
+	"github.com/stretchr/testify/assert"
 	"testing"
 )
 

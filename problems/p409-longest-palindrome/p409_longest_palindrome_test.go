@@ -1,7 +1,7 @@
 package longest_palindrome
 
 import (
-	"github.com/zhulinw/leetcode/testify/assert"
+	"github.com/stretchr/testify/assert"
 	"testing"
 )
 

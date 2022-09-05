@@ -6,7 +6,8 @@ import (
 )
 
 func TestGenGoCode(t *testing.T) {
-	ltQuestion := FetchLeetCodeQuestionInfo("maximum-number-of-groups-entering-a-competition")
+	ltQuestion := FetchLeetCodeQuestionInfo("" +
+		"find-the-index-of-the-first-occurrence-in-a-string")
 	cnQuestionInfo := NewCnQuestion(ltQuestion)
 
 	log.Println("====== fetch success =====")

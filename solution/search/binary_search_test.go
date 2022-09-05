@@ -1,7 +1,7 @@
 package search
 
 import (
-	"github.com/zhulinw/leetcode/testify/assert"
+	"github.com/stretchr/testify/assert"
 	"math"
 	"testing"
 )

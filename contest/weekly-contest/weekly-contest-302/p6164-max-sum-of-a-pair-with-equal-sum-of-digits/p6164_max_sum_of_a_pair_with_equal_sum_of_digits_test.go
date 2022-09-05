@@ -1,7 +1,7 @@
 package max_sum_of_a_pair_with_equal_sum_of_digits
 
 import (
-	"github.com/zhulinw/leetcode/testify/assert"
+	"github.com/stretchr/testify/assert"
 	"testing"
 )
 

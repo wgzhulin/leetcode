@@ -1,7 +1,7 @@
 package query_kth_smallest_trimmed_number
 
 import (
-	"github.com/zhulinw/leetcode/testify/assert"
+	"github.com/stretchr/testify/assert"
 	"testing"
 )
 

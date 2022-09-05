@@ -1,7 +1,7 @@
 package make_array_zero_by_subtracting_equal_amounts
 
 import (
-	"github.com/zhulinw/leetcode/testify/assert"
+	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
