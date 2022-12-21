@@ -7,7 +7,7 @@ import (
 
 func TestGenGoCode(t *testing.T) {
 	ltQuestion := FetchLeetCodeQuestionInfo("" +
-		"find-the-index-of-the-first-occurrence-in-a-string")
+		"generate-parentheses")
 	cnQuestionInfo := NewCnQuestion(ltQuestion)
 
 	log.Println("====== fetch success =====")

@@ -111,6 +111,9 @@ func (l *linkList) Reverse() *linkList {
 func (l *linkList) show() []int {
 	result := make([]int, 0, l.size)
 	for node := l.Head.Next; node != nil; node = node.Next {
+		if node == l.Head {  // loop linked list
+			break
+		}
 		result = append(result, node.Val)
 	}
 	return result

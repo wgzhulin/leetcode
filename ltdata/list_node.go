@@ -19,6 +19,9 @@ func (l *ListNode) String() string {
 	builder.WriteString("[")
 	for node := l; node != nil; node = node.Next {
 		builder.WriteString(fmt.Sprintf("%v", node.Val))
+		if node.Next == l {
+			break
+		}
 		if node.Next != nil {
 			builder.WriteString(", ")
 		}
@@ -26,4 +29,10 @@ func (l *ListNode) String() string {
 	builder.WriteString("]")
 
 	return builder.String()
+}
+
+type DoublyNode struct {
+	Val  int
+	Pre  *DoublyNode
+	Next *DoublyNode
 }
