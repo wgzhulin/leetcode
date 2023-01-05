@@ -38,7 +38,10 @@ func SliceToCycleListNode(input []int, pos int) *ltdata.ListNode {
 		head.Next = node
 		head = head.Next
 	}
-	tail.Next = cycle
+	if tail != nil {
+		tail.Next = cycle
+	}
+
 	return result.Next
 }
 
