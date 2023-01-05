@@ -2,7 +2,7 @@ package maximum_depth_of_binary_tree
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/zhulinw/leetcode/testify/tutils"
+	"github.com/zhulinw/leetcode/utils"
 	"testing"
 )
 
@@ -30,6 +30,6 @@ func TestMaxDepth(t *testing.T) {
 	}
 
 	for i := range input {
-		assert.Equal(t, output[i].Para1, maxDepth(tutils.IntSliceToBinaryTree(input[i].Para1)))
+		assert.Equal(t, output[i].Para1, maxDepth(utils.IntSliceToBinaryTree(input[i].Para1)))
 	}
 }

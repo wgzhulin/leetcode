@@ -2,7 +2,7 @@ package remove_duplicates_from_sorted_list
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/zhulinw/leetcode/testify/tutils"
+	"github.com/zhulinw/leetcode/utils"
 	"testing"
 )
 
@@ -40,7 +40,7 @@ func TestDeleteDuplicates(t *testing.T) {
 	}
 
 	for i := range input {
-		assert.Equal(t, tutils.SliceToListNode(output[i].Para1),
-			deleteDuplicates(tutils.SliceToListNode(input[i].Para1)))
+		assert.Equal(t, utils.SliceToListNode(output[i].Para1),
+			deleteDuplicates(utils.SliceToListNode(input[i].Para1)))
 	}
 }

@@ -2,7 +2,7 @@ package merge_two_sorted_lists
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/zhulinw/leetcode/testify/tutils"
+	"github.com/zhulinw/leetcode/utils"
 	"testing"
 )
 
@@ -32,7 +32,7 @@ func TestMergeTwoLists(t *testing.T) {
 	}
 
 	for _, tdata := range testData {
-		assert.Equal(t, tutils.SliceToListNode(tdata.excepted),
-			mergeTwoLists(tutils.SliceToListNode(tdata.input1), tutils.SliceToListNode(tdata.input2)))
+		assert.Equal(t, utils.SliceToListNode(tdata.excepted),
+			mergeTwoLists(utils.SliceToListNode(tdata.input1), utils.SliceToListNode(tdata.input2)))
 	}
 }

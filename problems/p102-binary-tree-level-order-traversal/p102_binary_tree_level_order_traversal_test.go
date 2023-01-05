@@ -2,7 +2,7 @@ package binary_tree_level_order_traversal
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/zhulinw/leetcode/testify/tutils"
+	"github.com/zhulinw/leetcode/utils"
 	"testing"
 )
 
@@ -30,6 +30,6 @@ func TestLevelOrder(t *testing.T) {
 	}
 
 	for i := range input {
-		assert.Equal(t, output[i].Para1, levelOrder(tutils.IntSliceToBinaryTree(input[i].Para1)))
+		assert.Equal(t, output[i].Para1, levelOrder(utils.IntSliceToBinaryTree(input[i].Para1)))
 	}
 }

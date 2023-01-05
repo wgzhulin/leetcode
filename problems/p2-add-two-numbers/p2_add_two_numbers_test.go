@@ -2,7 +2,7 @@ package add_two_numbers
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/zhulinw/leetcode/testify/tutils"
+	"github.com/zhulinw/leetcode/utils"
 	"testing"
 )
 
@@ -32,6 +32,6 @@ func TestAddTwoNumbers(t *testing.T) {
 	}
 
 	for _, tdata := range testData {
-		assert.Equal(t, tutils.SliceToListNode(tdata.except), addTwoNumbers(tutils.SliceToListNode(tdata.input1), tutils.SliceToListNode(tdata.input2)))
+		assert.Equal(t, utils.SliceToListNode(tdata.except), addTwoNumbers(utils.SliceToListNode(tdata.input1), utils.SliceToListNode(tdata.input2)))
 	}
 }

@@ -2,7 +2,7 @@ package reverse_linked_list
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/zhulinw/leetcode/testify/tutils"
+	"github.com/zhulinw/leetcode/utils"
 	"testing"
 )
 
@@ -30,6 +30,6 @@ func TestReverseList(t *testing.T) {
 	}
 
 	for i := range input {
-		assert.Equal(t, tutils.SliceToListNode(output[i].Para1), reverseList2(tutils.SliceToListNode(input[i].Para1)))
+		assert.Equal(t, utils.SliceToListNode(output[i].Para1), reverseList2(utils.SliceToListNode(input[i].Para1)))
 	}
 }

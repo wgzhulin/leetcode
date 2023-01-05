@@ -2,7 +2,7 @@ package linked_list_cycle_ii
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/zhulinw/leetcode/testify/tutils"
+	"github.com/zhulinw/leetcode/utils"
 	"testing"
 )
 
@@ -43,7 +43,7 @@ func TestDetectCycle(t *testing.T) {
 	}
 
 	for i := range input {
-		assert.Equal(t, tutils.SliceToCycleListNode(output[i].Para1, 0),
-			detectCycle(tutils.SliceToCycleListNode(input[i].Para1, input[i].Pos)))
+		assert.Equal(t, utils.SliceToCycleListNode(output[i].Para1, 0),
+			detectCycle(utils.SliceToCycleListNode(input[i].Para1, input[i].Pos)))
 	}
 }

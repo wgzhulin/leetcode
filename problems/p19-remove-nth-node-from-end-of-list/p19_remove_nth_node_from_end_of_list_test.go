@@ -2,7 +2,7 @@ package remove_nth_node_from_end_of_list
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/zhulinw/leetcode/testify/tutils"
+	"github.com/zhulinw/leetcode/utils"
 	"testing"
 )
 
@@ -32,7 +32,7 @@ func TestRemoveNthFromEnd(t *testing.T) {
 	}
 
 	for _, tdata := range testData {
-		assert.Equal(t, tutils.SliceToListNode(tdata.except),
-			removeNthFromEnd(tutils.SliceToListNode(tdata.input), tdata.input2))
+		assert.Equal(t, utils.SliceToListNode(tdata.except),
+			removeNthFromEnd(utils.SliceToListNode(tdata.input), tdata.input2))
 	}
 }

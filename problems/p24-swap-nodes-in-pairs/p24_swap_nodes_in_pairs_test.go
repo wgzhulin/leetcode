@@ -2,7 +2,7 @@ package swap_nodes_in_pairs
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/zhulinw/leetcode/testify/tutils"
+	"github.com/zhulinw/leetcode/utils"
 	"testing"
 )
 
@@ -28,7 +28,7 @@ func TestSwapPairs(t *testing.T) {
 	}
 
 	for _, tdata := range testData {
-		assert.Equal(t, tutils.SliceToListNode(tdata.excepted), swapPairs(tutils.SliceToListNode(tdata.input)))
-		assert.Equal(t, tutils.SliceToListNode(tdata.excepted), swapPairs2(tutils.SliceToListNode(tdata.input)))
+		assert.Equal(t, utils.SliceToListNode(tdata.excepted), swapPairs(utils.SliceToListNode(tdata.input)))
+		assert.Equal(t, utils.SliceToListNode(tdata.excepted), swapPairs2(utils.SliceToListNode(tdata.input)))
 	}
 }

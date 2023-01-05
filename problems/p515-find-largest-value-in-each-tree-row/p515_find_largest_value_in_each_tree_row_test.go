@@ -2,7 +2,7 @@ package find_largest_value_in_each_tree_row
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/zhulinw/leetcode/testify/tutils"
+	"github.com/zhulinw/leetcode/utils"
 	"testing"
 )
 
@@ -24,7 +24,7 @@ func TestLargestValues(t *testing.T) {
 	}
 
 	for _, tdata := range testData {
-		assert.Equal(t, tdata.excepted, largestValues(tutils.IntSliceToBinaryTree(tdata.input)))
-		assert.Equal(t, tdata.excepted, largestValues2(tutils.IntSliceToBinaryTree(tdata.input)))
+		assert.Equal(t, tdata.excepted, largestValues(utils.IntSliceToBinaryTree(tdata.input)))
+		assert.Equal(t, tdata.excepted, largestValues2(utils.IntSliceToBinaryTree(tdata.input)))
 	}
 }
